@@ -7,7 +7,7 @@ public class FurnitureOrder implements FurnitureOrderInterface {
      * TODO: Create a map of Furniture items to order quantities
      */
 
-    HashMap<Furniture,Integer> furnitureMap = null;
+    HashMap<Furniture,Integer> furnitureMap = furnitureMap = new HashMap<>();
 
     /**
      * Initialize a new mapping of Furniture types to order quantities.
@@ -37,7 +37,7 @@ public class FurnitureOrder implements FurnitureOrderInterface {
     }
 
     public float getTypeCost(Furniture type) {
-        return type.cost();
+        return type.cost()*furnitureMap.get(type);
     }
 
     public int getTotalOrderQuantity() {
